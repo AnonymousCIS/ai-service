@@ -7,13 +7,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@OpenAPIDefinition(info=@Info(title="API Service API"))
+@OpenAPIDefinition(info=@Info(title="Ai Service API"))
 public class SwaggerConfig {
     
     @Bean
     public GroupedOpenApi apiGroup() {
         return GroupedOpenApi.builder()
-                .group("API Service API v1")
+                .group("Ai Service API v1")
                 .pathsToMatch("/**")
                 .build();
     }
