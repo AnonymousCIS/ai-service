@@ -11,6 +11,6 @@ ENV FILE_URL=/uploads/
 ENV PYTHON_PATH=/bin/python3.9
 ENV PYTHON_SCRIPT=/cis-ai-service/
 
-ENTRYPOINT ["java", "-jar", "-Ddb.host=${DB_HOST}", "-Ddb.password=${DB_PASSWORD}", "-Ddb.username=${DB_USERNAME}", "-Dddl.auto=${DDL_AUTO}", "-Dconfig.server=${CONFIG_SERVER}", "-Deureka.server=${EUREKA_SERVER}", "-Dhostname=${HOSTNAME}", "-Dfile.path=${FILE_PATH}", "-Dfile.url=${FILE_URL}", "app.jar"]
+ENTRYPOINT ["java", "-jar", "-Ddb.host=${DB_HOST}", "-Ddb.password=${DB_PASSWORD}", "-Ddb.username=${DB_USERNAME}", "-Dddl.auto=${DDL_AUTO}", "-Dconfig.server=${CONFIG_SERVER}", "-Deureka.server=${EUREKA_SERVER}", "-Dhostname=${HOSTNAME}", "-Dfile.path=${FILE_PATH}", "-Dfile.url=${FILE_URL}", "-Dpython.run.path=${PYTHON_PATH}", "-Dpython.script.path=${PYTHON_SCRIPT}", "app.jar"]
 
 EXPOSE 3003
